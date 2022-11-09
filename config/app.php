@@ -181,7 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+//        Aloso added for Fortify
+        App\Providers\FortifyServiceProvider::class,
         /*
          * Package Service Providers...
          */
