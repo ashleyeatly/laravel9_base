@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PersonController;
+use App\Models\Person;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +19,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/people', [PersonController::class,'index'])
+    ->name('people.index')
+->middleware('auth');
+
+Route::get('/people/create', [PersonController::class, 'create'])
+    ->name('people.create')
+    ->middleware('auth');
+
+Route::post('/people', [PersonController::class, 'store'])
+    ->name('people.store')
+    ->middleware('auth');
+
+Route::get('/people/{person}',[PersonController::class,'show'])
+    ->name('people.show')
+    ->middleware('auth');
+
+Route::delete('/people/{person}',[PersonController::class,'destroy'])
+    ->name('people.destroy')
+    ->middleware('auth');
 
 Auth::routes();
 

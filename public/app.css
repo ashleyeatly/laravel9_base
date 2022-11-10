@@ -1,0 +1,21 @@
+body {
+    background: #cbd5e0;
+    color: #718096;
+    max-with: 600px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+p {
+    line-height: 1.7;
+}
+
+ul {
+    line-height: 1.7;
+}
+
+article {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #cbd5e0;
+}
